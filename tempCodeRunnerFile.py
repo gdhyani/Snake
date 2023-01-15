@@ -1,5 +1,8 @@
-snake.listen()
-snake.onkey(move_up, "w")
-snake.onkey(move_down, 's')
-snake.onkey(move_left, 'a')
-snake.onkey(move_right, 'd')
+    print(snake.heading())
+        if snake.heading() == 90:
+            snake.right(90)
+        elif snake.heading() == 270:
+            snake.left(90)
+        else:
+            pass
+        snake.forward(100);
