@@ -1,19 +1,26 @@
 from turtle import Turtle, Screen
-
+import time
 screen = Screen()
 screen.bgcolor('black')
 screen.setup(500, 500)
-
+position = [(0, 0), (-20, 0), (-40, 0)]
+snake_length = []
+game_on = True
 # snake on screen
-snake = Turtle('square')
-
-# length = 3
-# snake.shapesize(1, length)
-snake.penup()
-snake.fillcolor('white')
+for pos in position:
+    snake = Turtle('square')
+    snake.penup()
+    snake.fillcolor('white')
+    snake.setpos(pos)
+    snake_length.append(snake)
+screen.tracer(0)
 
 # control snake
-
+while game_on:
+    for snake in snake_length:
+        snake.forward(10)
+        screen.update()
+    time.sleep(1)
 
 
 def move_up():
@@ -26,7 +33,6 @@ def move_up():
             snake.right(90)
         else:
             pass
-        snake.forward(100)
 
 
 def move_down():
@@ -40,7 +46,6 @@ def move_down():
             snake.left(90)
         else:
             pass
-        snake.forward(100)
 
 
 def move_left():
@@ -54,7 +59,6 @@ def move_left():
             snake.right(90)
         else:
             pass
-        snake.forward(100)
 
 
 def move_right():
@@ -68,7 +72,6 @@ def move_right():
             snake.left(90)
         else:
             pass
-        snake.forward(100)
 
 
 screen.listen()
