@@ -1,53 +1,49 @@
     def move_up():
-        if snake.heading() == 270:
+        if snake_length[0].heading() == 270:
             pass
         else:
-            if snake.heading() == 0:
-                snake.left(90)
-            elif snake.heading() == 180:
-                snake.right(90)
+            if snake_length[0].heading() == 0:
+                snake_length[0].left(90)
+            elif snake_length[0].heading() == 180:
+                snake_length[0].right(90)
             else:
                 pass
-
 
     def move_down():
-        if snake.heading() == 90:
+        if snake_length[0].heading() == 90:
             pass
         else:
-            print(snake.heading())
-            if snake.heading() == 0:
-                snake.right(90)
-            elif snake.heading() == 180:
-                snake.left(90)
+            print(snake_length[0].heading())
+            if snake_length[0].heading() == 0:
+                snake_length[0].right(90)
+            elif snake_length[0].heading() == 180:
+                snake_length[0].left(90)
             else:
                 pass
-
 
     def move_left():
-        if snake.heading() == 0:
+        if snake_length[0].heading() == 0:
             pass
         else:
-            print(snake.heading())
-            if snake.heading() == 90:
-                snake.left(90)
-            elif snake.heading() == 270:
-                snake.right(90)
+            print(snake_length[0].heading())
+            if snake_length[0].heading() == 90:
+                snake_length[0].left(90)
+            elif snake_length[0].heading() == 270:
+                snake_length[0].right(90)
             else:
                 pass
-
 
     def move_right():
-        if snake.heading() == 360:
+        if snake_length[0].heading() == 360:
             pass
         else:
-            print(snake.heading())
-            if snake.heading() == 90:
-                snake.right(90)
-            elif snake.heading() == 270:
-                snake.left(90)
+            print(snake_length[0].heading())
+            if snake_length[0].heading() == 90:
+                snake_length[0].right(90)
+            elif snake_length[0].heading() == 270:
+                snake_length[0].left(90)
             else:
                 pass
-
 
     screen.listen()
     screen.onkey(move_up, "w")
